@@ -1,0 +1,490 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none; }
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto; }
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px; } }
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px; } }
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px; } }
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px; } }
+
+/**
+ * U can use following colors for your website
+ * Blue
+ *
+*/
+body {
+  background: #fff;
+  font-family: 'Roboto', sans-serif;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */ }
+  body::-webkit-scrollbar {
+    width: 1px; }
+  body::-webkit-scrollbar-track {
+    background: #000; }
+  body::-webkit-scrollbar-thumb {
+    background: #000;
+    transition: .3s ease; }
+  body::-webkit-scrollbar-thumb:hover {
+    background: #000; }
+
+#videoBackground {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; }
+  #videoBackground .videoGradient {
+    width: 100%;
+    height: 30vh;
+    background: linear-gradient(to top, #fff 10%, transparent);
+    position: absolute;
+    top: 70vh; }
+
+#videoBackground video {
+  width: 100%;
+  opacity: .3;
+  position: absolute;
+  top: 0; }
+  @media only screen and (max-width: 599px) {
+    #videoBackground video {
+      width: unset;
+      height: 100vh; } }
+
+header {
+  position: relative;
+  z-index: 15;
+  padding-top: 60px; }
+
+nav {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  width: 100%; }
+  nav > li {
+    flex-grow: 1;
+    font-size: 64px; }
+    @media only screen and (max-width: 599px) {
+      nav > a {
+        padding-left: 10px; } }
+  nav ul {
+    display: flex;
+    align-items: center; }
+    @media only screen and (max-width: 599px) {
+      nav ul {
+        display: none; } }
+    nav ul li {
+      margin-left: 30px; }
+      nav ul li a {
+        font-weight: 500; }
+  nav a {
+    position: relative;
+    color: #000;
+    font-weight: bold; }
+  nav a:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 3px;
+    background: #000;
+    transition: .3s; }
+    nav a.active {
+      opacity: .6; }
+    nav a.navbar-brand {
+      font-size: 64px;
+      margin-top: -20px; }
+    nav a:hover:before {
+      width: 50%; }
+
+main {
+  position: relative;
+  z-index: 15; }
+
+.aboutMe {
+  padding: 0 !important;
+  background: transparent !important;
+  margin-top: 50px; }
+  .aboutMe h1 {
+    color: #000;
+    font-size: 42px;
+    font-weight: lighter;
+    margin-bottom: 25px; }
+    @media only screen and (max-width: 599px) {
+      .aboutMe h1 {
+        padding: 10px; } }
+  .aboutMe h2 {
+    color: #000;
+    font-size: 42px;
+    font-weight: lighter;
+    margin-bottom: 25px; }
+    @media only screen and (max-width: 599px) {
+      .aboutMe h2 {
+        padding: 10px; } }
+  .aboutMe p {
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: lighter; }
+    .aboutMe p b {
+      font-weight: 500; }
+    @media only screen and (max-width: 599px) {
+      .aboutMe p {
+        padding: 10px; } }
+
+.skills {
+  display: block;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  color: #000; }
+  @media only screen and (max-width: 599px) {
+    .skills {
+      padding: 10px; } }
+  .skills h2 {
+    font-size: 24px; }
+  .skills .skill {
+    margin-top: 40px; }
+  .skills .skill h3 {
+    margin-top: 20px;
+    font-size: 18px;
+    padding-left: 15px;
+    position: relative; }
+    .skills .skill h3:before {
+      content: '-';
+      position: absolute;
+      left: 0; }
+  .skills .skill p {
+    margin-top: 20px;
+    color: rgba(0, 0, 0, 0.5);
+    padding-left: 15px; }
+
+.area {
+  width: 100%;
+  margin-top: 100px; }
+  @media only screen and (max-width: 599px) {
+    .area {
+      width: calc(100% - 20px);
+      padding-left: 10px;
+      padding-right: 10px; } }
+  .area h2 {
+    color: #000;
+    font-size: 24px;
+    font-weight: 500;
+    width: 100%;
+    margin-bottom: 10px; }
+  .area p {
+    width: 100%;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.4);
+    font-weight: lighter;
+    margin-bottom: 20px; }
+
+.experiences {
+  margin-top: 110px;
+  position: relative; }
+  .experiences ul {
+    position: relative;
+    display: flex;
+    width: 100%; }
+    .experiences ul:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 5px;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 4px;
+      top: 20px;
+      left: 0; }
+    @media only screen and (max-width: 599px) {
+      .experiences ul {
+        display: grid;
+        grid-template-columns: 100%; }
+        .experiences ul:before {
+          height: 100%;
+          width: 5px;
+          left: 0px;
+          top: 7px; }
+        .experiences ul li {
+          margin-bottom: 20px; }
+          .experiences ul li:before {
+            left: 15px !important; }
+          .experiences ul li .rank {
+            margin-left: 15px; }
+          .experiences ul li .corp {
+            margin-left: 15px; }
+          .experiences ul li .datetime {
+            margin-left: 15px; } }
+    .experiences ul li {
+      position: relative;
+      margin-top: 45px;
+      width: 100%;
+      opacity: .5; }
+      .experiences ul li.active {
+        opacity: 1 !important; }
+      .experiences ul li:before {
+        content: '';
+        position: absolute;
+        top: -33px;
+        left: 0;
+        width: 15px;
+        height: 15px;
+        background: #fff;
+        border: 3px solid #000;
+        border-radius: 15px; }
+      .experiences ul li .rank {
+        color: #000;
+        font-size: 22px;
+        font-weight: 500; }
+      .experiences ul li .corp {
+        margin-top: 10px; }
+        .experiences ul li .corp a {
+          font-size: 19px;
+          color: #000;
+          transition: .2s ease; }
+          .experiences ul li .corp a:hover {
+            opacity: .7;
+            text-decoration: none; }
+      .experiences ul li .datetime {
+        margin-top: 10px;
+        color: rgba(0, 0, 0, 0.3);
+        font-size: 16px; }
+
+.portfolio {
+  margin-bottom: 50px;
+  padding-top: 30px; }
+  .portfolio .references {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px; }
+    @media (min-width: 600px) and (max-width: 767px) {
+      .portfolio .references {
+        grid-template-columns: 1fr 1fr; } }
+    @media only screen and (max-width: 599px) {
+      .portfolio .references {
+        grid-template-columns: 1fr 1fr; } }
+    .portfolio .references .reference {
+      position: relative;
+      display: block;
+      background: #000;
+      width: 100%; }
+      .portfolio .references .reference img {
+        width: 100%; }
+      .portfolio .references .reference span {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #000;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        transition: .3s ease; }
+      .portfolio .references .reference:hover span {
+        opacity: 1; }
+  .portfolio .right-text {
+    width: 100%;
+    text-align: right;
+    margin-top: 10px; }
+    .portfolio .right-text a {
+      color: #000;
+      opacity: .6; }
+      .portfolio .right-text a:hover {
+        opacity: 1;
+        text-decoration: none; }
+
+.contact {
+  padding-top: 30px;
+  position: relative; }
+  .contact .body {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 55% 45%; }
+    @media only screen and (max-width: 599px) {
+      .contact .body {
+        display: flex;
+        flex-direction: column-reverse; } }
+    .contact .body .form {
+      position: relative; }
+      .contact .body .form .form-control {
+        position: relative;
+        border: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+        padding: 20px 0px;
+        font-size: 18px;
+        background: transparent;
+        border-radius: 0;
+        font-weight: lighter;
+        margin-bottom: 20px;
+        color: #000;
+        width: 100%; }
+        .contact .body .form .form-control:focus {
+          outline: 0;
+          box-shadow: 0 0 0 #000;
+          border-bottom-color: #000; }
+        .contact .body .form .form-control::placeholder {
+          color: rgba(0, 0, 0, 0.5); }
+      .contact .body .form .radios {
+        width: 100%; }
+        .contact .body .form .radios label {
+          margin-right: 20px;
+          color: #000;
+          cursor: pointer; }
+          .contact .body .form .radios label input {
+            position: absolute;
+            left: -9999px; }
+            .contact .body .form .radios label input + span {
+              display: flex;
+              align-items: center; }
+              .contact .body .form .radios label input + span span.isActive {
+                position: relative;
+                float: left;
+                width: 15px;
+                height: 15px;
+                border-radius: 10px;
+                border: 1px solid rgba(0, 0, 0, 0.5);
+                background: transparent;
+                margin-top: -1px;
+                margin-right: 7px; }
+                .contact .body .form .radios label input + span span.isActive:before {
+                  content: '';
+                  position: absolute;
+                  left: 3px;
+                  top: 3px;
+                  width: 9px;
+                  height: 9px;
+                  background: #000;
+                  border-radius: 10px;
+                  opacity: 0;
+                  transition: .2s; }
+            .contact .body .form .radios label input:checked + span span.isActive:before {
+              opacity: 1; }
+      .contact .body .form label.messageLabel {
+        font-size: 18px;
+        color: #000; }
+      .contact .body .form textarea.form-control {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+        margin-top: 15px;
+        width: calc(100% - 30px);
+        font-family: 'Roboto'; }
+        .contact .body .form textarea.form-control:focus {
+          border-color: #000; }
+      .contact .body .form button {
+        cursor: pointer;
+        float: right;
+        background: transparent;
+        border: 1px solid rgba(0, 0, 0, 0.6);
+        color: #000;
+        padding: 10px 20px 9px;
+        transition: .2s ease; }
+        .contact .body .form button:hover {
+          background: #000;
+          color: #fff; }
+    .contact .body .social {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 50px; }
+      @media only screen and (max-width: 599px) {
+        .contact .body .social {
+          padding: 0px; } }
+      .contact .body .social a {
+        color: #000;
+        font-size: 24px;
+        margin-bottom: 20px;
+        border-bottom: 2px solid transparent;
+        transition: .2s; }
+        .contact .body .social a:hover {
+          text-decoration: none;
+          border-color: #000; }
+      .contact .body .social p {
+        color: rgba(0, 0, 0, 0.8); }
+
+footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  margin-top: 50px; }
+  footer .container {
+    display: flex;
+    color: #000;
+    font-size: 14px;
+    font-weight: lighter; }
+    @media only screen and (max-width: 599px) {
+      footer .container {
+        flex-direction: column;
+        text-align: center; } }
+    footer .container .left {
+      flex-grow: 1; }
+      @media only screen and (max-width: 599px) {
+        footer .container .left {
+          margin-bottom: 15px; } }
+      footer .container .left a {
+        color: #000;
+        font-weight: 500; }
+    footer .container p {
+      margin-bottom: 0; }
